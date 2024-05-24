@@ -1,0 +1,334 @@
+\documentclass[a4paper, 11pt]{report}
+\usepackage{blindtext}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{fix-cm}
+\usepackage[hidelinks]{hyperref}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage[english]{babel}
+
+\geometry{ margin=30mm }
+\counterwithin{subsection}{section}
+\renewcommand\thesection{\arabic{section}.}
+\renewcommand\thesubsection{\thesection\arabic{subsection}.}
+\usepackage{tocloft}
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\setlength{\cftsecindent}{2.2em}
+\setlength{\cftsubsecindent}{4.2em}
+\setlength{\cftsecnumwidth}{2em}
+\setlength{\cftsubsecnumwidth}{2.5em}
+
+
+\begin{document}
+\titleformat{\section}
+{\normalfont\fontsize{15}{0}\bfseries}{\thesection}{1em}{}
+\titlespacing{\section}{0cm}{0.5cm}{0.15cm}
+\titleformat{\subsection}
+{\normalfont\fontsize{13}{0}\bfseries}{\thesubsection}{0.5em}{}
+\titlespacing{\section}{0cm}{0.5cm}{0.15cm}
+
+%=======================================================================================
+
+% #########################
+% IMPORTANT - Add student names here!
+% e.g. \newcommand{\stud1}{LOWE, David}
+\newcommand{\studA}{{Nguyen, Huy Khoi}}
+
+%
+% IMPORTANT - Then give your SIDs
+\newcommand{\sidA}{{530211392}}
+
+%
+% IMPORTANT - And then update which major each student will focus on
+\newcommand{\majA}{{Computer Science}}
+
+% #########################
+
+
+\pagenumbering{Alph}
+\begin{titlepage}
+\begin{flushright}
+\includegraphics[width=4cm]{USyd}\\[1cm]
+\end{flushright}
+
+\begin{centering}
+\textbf{\huge INFO1111: Computing 1A Professionalism}\\[0.75cm]
+\textbf{\huge 2024 Semester 1}\\[2cm]
+\textbf{\huge Skills: Team Project Report}\\[2cm]
+
+\textbf{\large Submission number: ?? Add your details}\\[0.5cm]
+\textbf{\large Github link: ?? Add your details}\\[0.75cm]
+\textbf{\huge Team Members:}\\[0.75cm]
+
+\begin{tabular}{|p{0.25\textwidth}|p{0.13\textwidth}|p{0.12\textwidth}|p{0.12\textwidth}|p{0.22\textwidth}|}
+	\hline
+	\multirow{2}{*}{Name} & \multirow{2}{*}{Student ID} & Target * & Target * & \multirow{2}{*}{Selected Major} \\
+	 & & Foundation & Advanced & \\
+	\hline
+	\hline
+	\raggedright{\studA} & \sidA & A & NA & \majA \\
+	\hline
+
+\end{tabular}
+\\[0.5cm]
+\end{centering}
+
+* Use the following codes:
+\begin{itemize}
+\setlength\itemsep{0em}
+\item NA = Not attempting in this submission
+\item A = Attempting (not previously attempting)
+\item AW = Attempting (achieved weak in a previous submission) 
+\item AG = Attempting (achieved good in a previous submission)
+\item S = Already achieved strong in a previous submission
+\end{itemize}
+
+\thispagestyle{empty}
+\end{titlepage}
+\pagenumbering{arabic}
+
+
+%=======================================================================================
+
+\tableofcontents
+
+%=======================================================================================
+\newpage
+\subsection{Skills for \majA: \studA}
+
+The rapidly evolving field of computer science demands a robust set of technical skills to navigate its complexities and innovations. The Skills Framework for the Information Age (SFIA) provides a comprehensive guide for identifying these essential skills. Below are three key technical skills, ordered from most required to least required, along with explanations of their significance in the computer science industry.
+
+\subsubsection*{1. Software Development (PROG)}
+Software development is the cornerstone of the computer science industry. According to the SFIA framework, this skill encompasses the design, coding, testing, and maintenance of software systems. It is fundamental because it directly impacts the creation of applications and systems that drive technological advancements.
+
+\paragraph{Why it is a Key Skill:}
+\begin{itemize}
+    \item \textbf{Innovation and Problem-Solving:} Software development skills enable professionals to create innovative solutions to complex problems, which is crucial in an industry that thrives on new ideas and technologies (SFIA, 2021).
+    \item \textbf{Efficiency and Automation:} Proficient software development can lead to the automation of tasks, improving efficiency and productivity across various sectors (Pressman \& Maxim, 2014).
+    \item \textbf{Quality Assurance:} Understanding the principles of software development ensures that the products meet high standards of quality and reliability, which is critical for user satisfaction and safety (Sommerville, 2016).
+\end{itemize}
+
+\subsubsection*{2. Cybersecurity (SCTY)}
+With the increasing prevalence of cyber threats, cybersecurity has become a pivotal skill in the computer science industry. The SFIA framework defines cybersecurity as the protection of information systems against unauthorized access, attacks, and damage.
+
+\paragraph{Why it is a Key Skill:}
+\begin{itemize}
+    \item \textbf{Data Protection:} Cybersecurity skills are essential for safeguarding sensitive data from breaches and ensuring privacy, which is a growing concern in the digital age (SFIA, 2021).
+    \item \textbf{Risk Management:} Professionals with cybersecurity expertise can identify and mitigate risks, protecting organizations from potentially devastating cyber-attacks (Stallings, Brown, \& Bauer, 2018).
+    \item \textbf{Compliance and Regulation:} Knowledge of cybersecurity helps in adhering to legal and regulatory requirements, which is crucial for maintaining trust and credibility (Whitman \& Mattord, 2017).
+\end{itemize}
+
+\subsubsection*{3. Data Analysis (DTAN)}
+Data analysis involves the inspection, cleansing, and modeling of data to discover useful information and support decision-making. In the SFIA framework, data analysis is recognized as a critical skill for deriving insights from data.
+
+\paragraph{Why it is a Key Skill:}
+\begin{itemize}
+    \item \textbf{Informed Decision-Making:} Data analysis skills enable professionals to make data-driven decisions, enhancing strategic planning and operational efficiency (SFIA, 2021).
+    \item \textbf{Trend Identification:} Analyzing data helps in identifying trends and patterns, which can inform business strategies and innovation (Provost \& Fawcett, 2013).
+    \item \textbf{Competitive Advantage:} Organizations that leverage data analysis gain a competitive edge by understanding market dynamics and customer behavior better (McAfee \& Brynjolfsson, 2012).
+\end{itemize}
+
+% ========================================================
+
+\newpage
+\section{Task 2 (Advanced): Advanced Skills}
+
+Task 2 contains two components (both required).\\[2mm]
+
+\textbf{Component 1: Exploration of Tech Tools}
+
+The first component focuses on exploration of relevant tech tools used within professional computing employment. All companies make use of a range of technologies and tools (often as part of a tech stack). These tools might be implementation languages; design tools; data analysis tools; collaboration technologies, etc. Each student should identify two tools that are widely used in industry, and which relate to the major you are focusing on for this project. You should then describe:
+
+\begin{enumerate}
+\item What are the two tools you have identified for your chosen major
+\item The main functionality of those tools;
+\item The ways in which those tools are used in the industry of your chosen major;
+\item Any weaknesses or limitations of those tools.
+\end{enumerate}
+
+This task consists of two parts:
+
+\begin{enumerate}
+\item \textbf{Part A}: Generate a set of questions that you can put to ChatGPT in order to obtain answers to each of the above four questions. Using ChatGPT, then generate the answers for each of the two tools. You must include in the report below both the questions that you posed to ChatGPT, and the answers that it provided.  (100–250 words each).
+\item \textbf{Part B}: For each of the four answers from Part A, assess the answer that ChatGPT provided and explain to us why you agree or disagree with the answer (100 words for each question above).
+\end{enumerate}
+
+
+As examples of the tools which might be selected (which you shouldn’t now use):
+\begin{itemize}
+\item Computer Science: Eclipse.
+\item Software Development: GitHub. 
+\item Cyber Security: Wireshark. 
+\item Data Science: Hadoop.
+\end{itemize}
+
+Note also that no two students in the same tutorial should choose the same tools, so your tutor will maintain a list of those that have already been selected. You should therefore check this list with your tutor and then confirm your choice with your tutor prior to researching your proposed tools and spending time writing about them. (Target = $\sim$200-400 words per tool).\\[2mm]
+
+\textbf{Component 2: Advanced LaTeX and Git Skills}
+
+The second component of Task 2 focuses on more advanced technical skills in LaTeX and Git. The following is a list of advanced Git and LaTeX skills/features. Each student in your team that is attempting the Advanced task should select a different pair of items from each list (e.g. you might choose ''Resetting and Tags'' from the git list, and ''Cross-referencing and Custom commands'' from the LaTeX list). You then need to demonstrate actual use of each item (either through activity in Git, or through including items in this report). (Target = $\sim$100-200 words per student for each feature).
+
+\begin{enumerate}
+\item{Git}
+	\begin{enumerate}
+	\item Rebasing and Ignoring files 
+	\item Forking and Special files 
+	\item Resetting and Tags 
+	\item Reverting and Automated merges 
+	\item Hooks and Tags 
+	\end{enumerate}
+\item LaTeX 
+	\begin{enumerate}
+	\item Cross-referencing and Custom commands 
+	\item Footnotes/margin notes and creating new environments 
+	\item Floating figures and editing style sheets 
+	\item Graphics and advanced mathematical equations 
+	\item Macros and hyperlinks
+	\end{enumerate}
+\end{enumerate}
+~\\[2mm]
+
+\textbf{OVERALL REQUIREMENTS:}
+
+To achieve an ''OK'' rating for this task you must individually accomplish the following:
+\begin{itemize}
+\item \textbf{Component 1 - Exploration of Tech Tools}
+	\begin{itemize}
+	\item Identified two tools that are widely used in industry, and which relate to the major chosen for this project.
+		\begin{itemize}
+		\item The two tools selected are not the same as the tools selected by other students in the tutorial. 
+		\item The two tools selected are relevant to the major chosen.
+		\end{itemize}
+	\item Answer the following questions as instructed in 'Part A' \& 'Part B':
+		\begin{itemize}
+		\item What are the two tools you have identified for your chosen major
+		\item 3 main functionality of each of the identified tools
+		\item The ways in which those tools are used in the industry of your chosen major;
+		\item 2 weaknesses or limitations of each of the tools
+		\end{itemize}
+	\item \textbf{Part A}: Generate a set of questions (minimum 5 questions) that can be put to ChatGPT in order to obtain answers to each of the above four questions. Using ChatGPT, then generate the answers for each of the two tools. You must include in the report below both the questions that you posed to ChatGPT, and the answers that it provided. (100 - 250 words for each question)
+	\item \textbf{Part B}: For each of the four answers from Part A, assess the answer that ChatGPT provided and explain to us why they agree or disagree with the answer (100 words for each question above).
+	\end{itemize}
+\item \textbf{Component 2 - Advanced LaTex \& Git Skills}
+	\begin{itemize}
+	\item Each member of the team has selected one pair of items from each list below and demonstrate actual use of each item (i.e. a Git item and a LaTeX item).
+	\item \textbf{Git}
+		\begin{itemize}
+		\item Rebasing and Ignoring files
+		\item Forking and Special files
+		\item Resetting and Tags
+		\item Reverting and Automated merges
+		\item Hooks and Tags
+		\end{itemize}
+	\item \textbf{LATEX}
+		\begin{itemize}
+		\item Cross-referencing and Custom commands
+		\item Footnotes/margin notes and creating new environments
+		\item Floating figures and editing style sheets
+		\item Graphics and advanced mathematical equations
+		\item Macros and hyperlinks
+		\end{itemize}
+	\item This means no two members of the team have not chosen the same item from either of the lists above.
+	\item You have demonstrated the use of your selected items either through activity in Git, or through including items in this report.
+	\item This means for Git items:
+		\begin{itemize}
+		\item You have added your tutor to your git repository and when they view it they are able to see your activity that demonstrates the use of your selected items (e.g. forks, hooks, tags, merges etc.).
+		\item You have included screenshots and annotations (where necessary) in your report and provided an explanation of $\sim$100 words of your use of advanced Git features.
+		\end{itemize}
+	\item and for LaTeX items:
+		\begin{itemize}
+		\item You have included items you have chosen in your LaTeX report document submission and the tutor is able to clearly see it (e.g. the pdf document written in LaTeX has hyperlinks, macros, cross referencing etc. included in it).
+		\item You have included screenshots and annotations (where necessary) in your report and provided an explanation of $\sim$100 words of your use of advanced LaTeX features.
+		\end{itemize}
+	\end{itemize}
+\item Referencing
+	\begin {itemize}
+	\item You have provided in-text references (IEEE) to support your claims or where they gathered the information from.
+	\item You have a reference list following the IEEE referencing guidelines.
+		\begin{itemize}
+		\item Some common things to look for to see whether your have correctly followed the referencing guide are:
+		\item Sources are listed in alphabetical order
+		\item The sources you have listed are only the sources that are present in-text.
+		\item All sources seen in-text are included in the reference list.
+		\item You followed the correct convention for references that don’t have author’s details or multiple sources have the same author and year of publication
+		\item You have included the required information for the source type as outlined in the guide.
+		\item Sources are not a list (i.e. dotpoints)
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+
+To achieve a ''STRONG'' rating you must accomplish all of the above in addition to the following:
+\begin{itemize}
+\item The answers provided to the 4 questions (component 1b) use ChatGPT and independent research and analysis is excellent, showing a deep understanding of industry.
+\item You have used advanced Git features such as branching when demonstrating the items you selected (component 2a).
+\end{itemize}
+
+
+
+% ========================================================
+
+\subsection{Tools and Skills for \majA: \studA}
+
+\subsubsection{Part A: Exploration of tech tools}
+
+Your text goes here
+
+\subsubsection{Part B: Analysis}
+
+Your text goes here
+
+\subsubsection{Technical Skills (LaTeX and Git)}
+
+Your text goes here
+
+
+% ========================================================
+
+
+\newpage
+\section{Submission contribution overview}
+
+For each submission, outline the approach taken to your teamwork, how you combined the various contributions, and whether there were any significant variations in the levels of involvement. (Target = $\sim$100-300 words).
+
+\subsection{Submission 1 contribution overview}
+
+As above, for submission 1, I did on my own.
+
+
+%=======================================================================================
+
+\newpage
+\bibliographystyle{plain}
+\begin{thebibliography}{}
+
+\bibitem{sfia2021}
+SFIA. (2021). Skills Framework for the Information Age. \url{https://sfia-online.org/en/sfia-8}
+
+\bibitem{pressman2014}
+Pressman, R. S., \& Maxim, B. R. (2014). Software Engineering: A Practitioner's Approach. McGraw-Hill Education.
+
+\bibitem{sommerville2016}
+Sommerville, I. (2016). Software Engineering. Pearson Education.
+
+\bibitem{stallings2018}
+Stallings, W., Brown, L., \& Bauer, M. D. (2018). Computer Security: Principles and Practice. Pearson Education.
+
+\bibitem{whitman2017}
+Whitman, M. E., \& Mattord, H. J. (2017). Principles of Information Security. Cengage Learning.
+
+\bibitem{provost2013}
+Provost, F., \& Fawcett, T. (2013). Data Science for Business: What You Need to Know about Data Mining and Data-Analytic Thinking. O'Reilly Media.
+
+\bibitem{mcafee2012}
+McAfee, A., \& Brynjolfsson, E. (2012). Big Data: The Management Revolution. Harvard Business Review.
+
+\end{thebibliography}
+\newpage
+
+\end{document}
+\end{report}
